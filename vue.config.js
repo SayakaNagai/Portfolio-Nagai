@@ -2,7 +2,7 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
-  publicPath: "./",
+  publicPath: "/Portfolio-Nagai/",
   assetsDir: "",
   outputDir: "dist"
 }
