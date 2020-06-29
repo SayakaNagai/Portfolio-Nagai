@@ -1,5 +1,15 @@
 <template>
   <v-app>
+    <v-carousel>
+      <v-carousel-item
+        v-for="(item,i) in items"
+        :key="i"
+        :src="item.src"
+        height="400px"
+        reverse-transition="fade-transition"
+        transition="fade-transition"
+      ></v-carousel-item>
+    </v-carousel>
     <v-app-bar
       app
       color="primary"
@@ -53,8 +63,23 @@ export default {
     HelloWorld,
   },
 
-  data: () => ({
-    //
-  }),
+  data () {
+    return {
+      items: [
+        {
+          src: require('./assets/キノコ採り.png'),
+        },
+        {
+          src: require('./assets/ヘンゼルとグレーテル.png'),
+        },
+        {
+          src: require('./assets/怪物お風呂.png'),
+        },
+        {
+          src: require('./assets/甲冑バク.png'),
+        },
+      ],
+    }
+  },
 };
 </script>
