@@ -23,6 +23,7 @@
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
           width="100"
         />
+        <v-btn small>Normal</v-btn>
       </div>
 
       <v-spacer></v-spacer>
