@@ -6,66 +6,99 @@
         :key="i"
         :src="item.src"
         height="400px"
+        continuous=false
         reverse-transition="fade-transition"
         transition="fade-transition"
       ></v-carousel-item>
     </v-carousel>
+
+    <!-- header -->
     <v-app-bar
       app
-      color="primary"
+      color="grey darken-4"
       dark
     >
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
-          class="shrink mr-2"
+          class="shrink mr-2 mb-4"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="../public/logo.png"
           transition="scale-transition"
-          width="40"
+          width="130"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-        <v-btn small>Normal</v-btn>
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+      <!-- Humberger menu -->
+      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+      </v-app-bar>
+    <v-navigation-drawer
+        v-model="drawer"
+        fixed
+        temporary
+        color="grey darken-4"
+        class="white--text"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+        <v-list
+          nav
+          dense
+        >
+          <v-list-item-group>
+            <v-list-item>
+              <v-list-item-title>HOME</v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>PROFILE</v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>ILLUSTRATION</v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>WORK</v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>CONTACT</v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-navigation-drawer>
+
+    <!-- <v-content>
+      <HelloWorld/>
+    </v-content> -->
 
     <v-content>
-      <HelloWorld/>
+      <Profile/>
     </v-content>
+
+    <v-content>
+      <Illustration/>
+    </v-content>
+
+    <v-footer>
+      <v-spacer></v-spacer>
+      <div>&copy; key nagashima {{ new Date().getFullYear() }}</div>
+    </v-footer>
   </v-app>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+//import HelloWorld from './components/HelloWorld';
+import Profile from './components/Profile';
+import Illustration from './components/Illustration';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    //HelloWorld,
+    Profile,
+    Illustration
   },
 
   data () {
     return {
+      drawer: false,
       items: [
         {
           src: require('./assets/キノコ採り.png'),
