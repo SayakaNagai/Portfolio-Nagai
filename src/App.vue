@@ -19,7 +19,7 @@
       dark
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-      <div class="d-flex align-center">
+      <div style="margin-left: auto; margin-right: auto;">
         <v-img
           alt="Logo"
           class="shrink mr-2 my-4"
@@ -43,11 +43,11 @@
           dense
         >
           <v-list-item-group>
-            <v-list-item>
-              <v-list-item-title :to="'/'">HOME</v-list-item-title>
+            <v-list-item :to="'/'">
+              <v-list-item-title>HOME</v-list-item-title>
             </v-list-item>
-            <v-list-item>
-              <v-list-item-title :to="'/Profile'">PROFILE</v-list-item-title>
+            <v-list-item :to="'/Profile'">
+              <v-list-item-title>PROFILE</v-list-item-title>
             </v-list-item>
             <v-list-item>
               <v-list-item-title>ILLUSTRATION</v-list-item-title>
