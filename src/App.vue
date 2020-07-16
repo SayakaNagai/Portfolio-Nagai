@@ -18,19 +18,19 @@
       color="grey darken-4"
       dark
     >
+      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2 mb-4"
+          alt="Logo"
+          class="shrink mr-2 my-4"
           contain
-          src="../public/logo.png"
+          src="./assets/logo.png"
           transition="scale-transition"
           width="130"
         />
       </div>
       <!-- Humberger menu -->
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-      </v-app-bar>
+    </v-app-bar>
     <v-navigation-drawer
         v-model="drawer"
         fixed
@@ -74,6 +74,10 @@
       <Illustration/>
     </v-content>
 
+    <v-content>
+      <Work/>
+    </v-content>
+
     <v-footer>
       <v-spacer></v-spacer>
       <div>&copy; key nagashima {{ new Date().getFullYear() }}</div>
@@ -86,6 +90,7 @@
 //import HelloWorld from './components/HelloWorld';
 import Profile from './components/Profile';
 import Illustration from './components/Illustration';
+import Work from './components/Work';
 
 export default {
   name: 'App',
@@ -93,7 +98,8 @@ export default {
   components: {
     //HelloWorld,
     Profile,
-    Illustration
+    Illustration,
+    Work
   },
 
   data () {
@@ -108,9 +114,6 @@ export default {
         },
         {
           src: require('./assets/怪物お風呂.png'),
-        },
-        {
-          src: require('./assets/甲冑バク.png'),
         },
       ],
     }
