@@ -44,10 +44,10 @@
         >
           <v-list-item-group>
             <v-list-item>
-              <v-list-item-title>HOME</v-list-item-title>
+              <v-list-item-title :to="'/'">HOME</v-list-item-title>
             </v-list-item>
             <v-list-item>
-              <v-list-item-title>PROFILE</v-list-item-title>
+              <v-list-item-title :to="'/Profile'">PROFILE</v-list-item-title>
             </v-list-item>
             <v-list-item>
               <v-list-item-title>ILLUSTRATION</v-list-item-title>
