@@ -33,7 +33,9 @@
       >
         <p>
           神戸大学DTM作曲同好会 音見鶏のアルバム「OTOMIDORI GRADUATION ALUBUM 2018」のアートワークを担当しました。
-          <a class="white--text" href="http://www.otomidori.at-ninja.jp/albums/2018graduate.html"></a>
+        </p>
+        <p>
+          <a class="white--text" target="_blank" href="http://www.otomidori.at-ninja.jp/albums/2018graduate.html">LINK</a>
         </p>
       </v-col>
 
