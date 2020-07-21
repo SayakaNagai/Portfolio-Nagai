@@ -1,12 +1,11 @@
 <template>
   <v-container>
-    <v-row class="text-center">
-
-      <v-col cols="12" class="white--text">
+    <v-row>
+      <v-col cols="12" class="white--text text-center">
         <h1>Work</h1>
       </v-col>
 
-      <v-col cols="12" class="white--text">
+      <v-col cols="12" class="white--text text-center">
         <v-alert
           color="grey darken-3"
           dark
@@ -21,9 +20,9 @@
       >
         <v-img
           :src="require('../assets/2018graduate.png')"
-          :lazy-src="require('../assets/2018graduate.png')"
           class="grey lighten-3"
           width="300px"
+          style="margin-left: auto; margin-right: auto;"
         >
         </v-img>
       </v-col>
@@ -45,16 +44,6 @@
 
 <script>
   export default {
-    name: 'Profile',
-
-    data: () => ({
-      items: [
-        require('../assets/キノコ採り.png'),
-        require('../assets/ヘンゼルとグレーテル.png'),
-        require('../assets/怪物お風呂.png'),
-        require('../assets/甲冑バク.png'),
-        require('../assets/日本画男性.png'),
-      ],
-    }),
+    name: 'Profile'
   }
 </script>

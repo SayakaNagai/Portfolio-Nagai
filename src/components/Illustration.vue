@@ -20,7 +20,9 @@
         :key="item"
         class="d-flex child-flex"
         cols="12"
+        md="4"
         sm="6"
+        xs="12"
       >
         <v-img
           :src=item
