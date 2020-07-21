@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './Home'
-import Profile from './Profile'
+import Profile from './components/Profile'
 import Illustration from './components/Illustration'
 import Work from './components/Work'
 
